@@ -1,9 +1,11 @@
 import React, { useContext } from "react";
 import MyContextApi from "../context/MyContextApi";
-import { IconButton } from "@material-tailwind/react";
 
 function MiApi() {
   const { data } = useContext(MyContextApi);
+  
+  
+
   return (
     <>
       <div className="container flex flex-wrap justify-center items-center bg-fixed">
@@ -12,12 +14,9 @@ function MiApi() {
             key={item.name}
             className="w-1/2 sm:w-1/3 md:w-1/5 m-2 items-center flex flex-col justify-center rounded-x1 trasnform transition-all hover:-translate-y-2 duration-300 shadow-lg hover:shadow-2x "
           >
-            <div className="pb-2">
-            <IconButton size="sm">
-        <i className="fas fa-heart" />
-      </IconButton>
+            <div className="p-1 m-1 bg-amber-200 justify-center rounded-x1 trasnform transition-all hover:-translate-y-2 duration-300 shadow-lg hover:shadow-2x">
+              <button className="text-gray-50">♥</button>
             </div>
-
             <img
               className=" w-24 h-24 rounded-full shadow-lg"
               src={item.img}
