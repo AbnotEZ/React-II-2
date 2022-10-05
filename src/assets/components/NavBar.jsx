@@ -6,9 +6,8 @@ function NavBar() {
     <nav className="p-3 bg-gray-50 rounded border-gray-200 dark:bg-gray-800 dark:border-gray-700">
       <div className="container flex flex-wrap justify-between items-center mx-auto">
         <a href="#" className="flex items-center">
-          <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
-            Flowbite
-          </span>
+          <img className="self-center w-20 h-15 font-semibold whitespace-nowrap dark:text-white" src="https://www.digimon.net/images/common/logo_site.png" alt="" />
+        
         </a>
         <button
           data-collapse-toggle="navbar-solid-bg"

@@ -7,19 +7,17 @@ const MyContextProvider = ({ children }) => {
   
   const getData = async () => {
     const data = await fetch(url)
-    const result = data.json()
-    clg
-    
+    const result = await data.json()
+    const filtrado = result.slice(0,8);
+    setData(filtrado)
   }
 
   useEffect(() => {
     getData()
-  
-  }, [])
-  
+  }, []);
 
-  useEffect(() => {
-    (async function () {
+  /* useEffect(() => {
+    ( async function () {
       const data = await fetch(url);
       const data2= data.forEach(item => item.like = false);
       const result = await data2.json();
@@ -27,7 +25,8 @@ const MyContextProvider = ({ children }) => {
        console.log(filtrado) 
        setData(filtrado);
     })();
-  }, []);
+    getData();
+  }, []); */
 
 
   return (
